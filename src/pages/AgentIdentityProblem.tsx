@@ -1,10 +1,13 @@
+
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Fingerprint, HelpCircle, Contact, ClipboardList } from "lucide-react";
+import { Fingerprint, HelpCircle, Contact, ClipboardList, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const AgentIdentityProblem = () => {
   return (
@@ -78,9 +81,12 @@ const AgentIdentityProblem = () => {
               <li className="flex items-center gap-2 text-muted-foreground">∙ Delegation & Impersonation</li>
               <li className="flex items-center gap-2 text-muted-foreground">∙ Auditing & Observability</li>
             </ul>
-             <p className="mt-4 text-sm text-muted-foreground">
-              This guide will be expanded to include deep dives on each of these topics.
-            </p>
+            <Button asChild className="mt-6 w-full sm:w-auto">
+              <Link to="/iam-challenges">
+                Explore All Challenges
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </CardContent>
         </Card>
       </div>
