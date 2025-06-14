@@ -1,11 +1,10 @@
-
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Fingerprint, HelpCircle, Contact, ShieldCheck } from "lucide-react";
+import { Fingerprint, HelpCircle, Contact, ClipboardList } from "lucide-react";
 
 const AgentIdentityProblem = () => {
   return (
@@ -57,19 +56,30 @@ const AgentIdentityProblem = () => {
           </CardContent>
         </Card>
 
-        <Card className="border-primary">
+        <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-               <ShieldCheck className="h-6 w-6 text-primary" />
-               The Solution: Workload Identity
+              <ClipboardList className="h-6 w-6 text-primary" />
+              The Broader Problem Space
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground">
-              The modern approach is called <strong>Workload Identity</strong>. The core idea is to shift identity from being based on a long-lived secret stored by the agent to a verifiable identity provided by the trusted platform it's running on (e.g., AWS, Google Cloud, Kubernetes).
+            <p className="text-muted-foreground mb-4">
+              Agent Identity is just one piece of the puzzle. Securing an autonomous workforce requires solving a set of interconnected challenges:
             </p>
-            <p className="mt-4 text-muted-foreground">
-              Instead of the agent holding a secret, the platform issues it a short-lived, cryptographically signed token when it starts. The agent can then present this token to other services to prove its identity. This is like the platform vouching for the agent, saying "I can confirm this is a legitimate instance of 'Data-Processor-v2' running in our secure environment."
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+              <li className="flex items-center gap-2">
+                <span className="font-semibold text-primary">✓ Agent Identity Problem</span>
+                <span className="text-xs text-muted-foreground">(This Page)</span>
+              </li>
+              <li className="flex items-center gap-2 text-muted-foreground">∙ Dynamic Authorization</li>
+              <li className="flex items-center gap-2 text-muted-foreground">∙ Ephemeral Credentials</li>
+              <li className="flex items-center gap-2 text-muted-foreground">∙ Secure Introduction</li>
+              <li className="flex items-center gap-2 text-muted-foreground">∙ Delegation & Impersonation</li>
+              <li className="flex items-center gap-2 text-muted-foreground">∙ Auditing & Observability</li>
+            </ul>
+             <p className="mt-4 text-sm text-muted-foreground">
+              This guide will be expanded to include deep dives on each of these topics.
             </p>
           </CardContent>
         </Card>
