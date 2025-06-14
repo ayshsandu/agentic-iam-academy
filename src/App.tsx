@@ -16,6 +16,11 @@ import WhatIsAgenticAI from "./pages/WhatIsAgenticAI";
 import WhyIAMMatters from "./pages/WhyIAMMatters";
 import AgentIdentityProblem from "./pages/AgentIdentityProblem";
 import IamChallenges from "./pages/IamChallenges";
+import DynamicAuthorization from "./pages/DynamicAuthorization";
+import EphemeralCredentials from "./pages/EphemeralCredentials";
+import SecureIntroduction from "./pages/SecureIntroduction";
+import DelegationAndImpersonation from "./pages/DelegationAndImpersonation";
+import AuditingAndObservability from "./pages/AuditingAndObservability";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +37,11 @@ const App = () => (
             <Route path="/why-iam-matters" element={<WhyIAMMatters />} />
             <Route path="/agent-identity-problem" element={<AgentIdentityProblem />} />
             <Route path="/iam-challenges" element={<IamChallenges />} />
+            <Route path="/dynamic-authorization" element={<DynamicAuthorization />} />
+            <Route path="/ephemeral-credentials" element={<EphemeralCredentials />} />
+            <Route path="/secure-introduction" element={<SecureIntroduction />} />
+            <Route path="/delegation-and-impersonation" element={<DelegationAndImpersonation />} />
+            <Route path="/auditing-and-observability" element={<AuditingAndObservability />} />
             <Route path="/concepts" element={<Concepts />} />
             <Route path="/best-practices" element={<BestPractices />} />
             <Route path="/scenarios" element={<Scenarios />} />
