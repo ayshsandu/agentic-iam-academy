@@ -12,6 +12,7 @@ import BestPractices from "./pages/BestPractices";
 import Glossary from "./pages/Glossary";
 import About from "./pages/About";
 import Scenarios from "./pages/Scenarios";
+import WhatIsAgenticAI from "./pages/WhatIsAgenticAI";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Index />} />
+            <Route path="/what-is-agentic-ai" element={<WhatIsAgenticAI />} />
             <Route path="/concepts" element={<Concepts />} />
             <Route path="/best-practices" element={<BestPractices />} />
             <Route path="/scenarios" element={<Scenarios />} />

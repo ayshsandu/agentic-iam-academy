@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import {
   NavigationMenu,
@@ -11,6 +12,7 @@ import { Menu } from "lucide-react";
 import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 const navLinks = [
+  { to: "/what-is-agentic-ai", label: "Agentic AI" },
   { to: "/concepts", label: "Core Concepts" },
   { to: "/best-practices", label: "Best Practices" },
   { to: "/scenarios", label: "Scenarios" },
