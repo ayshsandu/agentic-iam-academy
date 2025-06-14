@@ -3,7 +3,7 @@ const About = () => {
   return (
     <div className="container max-w-4xl py-8 md:py-12">
       <h1 className="text-4xl font-bold tracking-tight">
-        About Agentic IAM Academy
+        About IAM for Agentic AI Academy
       </h1>
       <p className="mt-4 text-lg text-muted-foreground">
         Empowering developers to build secure and intelligent AI systems.
@@ -14,7 +14,7 @@ const About = () => {
           The rise of agentic AI systems introduces new and complex challenges for
           Identity and Access Management (IAM). Traditional IAM models were not
           designed for autonomous, non-human entities that act on behalf of
-          users or organizations. Agentic IAM Academy was created to bridge this
+          users or organizations. IAM for Agentic AI Academy was created to bridge this
           gap.
         </p>
         <p>
