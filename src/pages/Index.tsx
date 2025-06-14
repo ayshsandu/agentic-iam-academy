@@ -44,7 +44,7 @@ const Index = () => {
         </p>
         <div className="mt-2 flex flex-wrap justify-center gap-4">
           <Button asChild size="lg">
-            <Link to="/why-iam-matters">
+            <Link to="/what-is-agentic-ai">
               Get Started <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
