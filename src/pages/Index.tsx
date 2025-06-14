@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -11,21 +10,24 @@ import {
 } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 
-const concepts = [
+const featuredSections = [
   {
-    title: "Authentication",
-    description: "Verifying the identity of a user, process, or device.",
+    title: "What is Agentic AI?",
+    description:
+      "Understand the fundamentals of autonomous AI systems and why they matter.",
+    link: "/what-is-agentic-ai",
+  },
+  {
+    title: "Core IAM Concepts",
+    description:
+      "Explore the building blocks of Identity and Access Management for AI.",
     link: "/concepts",
   },
   {
-    title: "Authorization",
-    description: "Determining what an authenticated user is allowed to do.",
-    link: "/concepts",
-  },
-  {
-    title: "Single Sign-On (SSO)",
-    description: "One-click access to multiple systems with a single login.",
-    link: "/concepts",
+    title: "Security Best Practices",
+    description:
+      "Discover industry-standard practices for securing your AI agents.",
+    link: "/best-practices",
   },
 ];
 
@@ -42,12 +44,9 @@ const Index = () => {
         </p>
         <div className="mt-2 flex flex-wrap justify-center gap-4">
           <Button asChild size="lg">
-            <Link to="/concepts">
-              Explore Concepts <ArrowRight className="ml-2 h-4 w-4" />
+            <Link to="/what-is-agentic-ai">
+              Get Started <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
-          </Button>
-          <Button asChild variant="outline" size="lg">
-            <Link to="/best-practices">View Best Practices</Link>
           </Button>
         </div>
       </section>
@@ -55,21 +54,21 @@ const Index = () => {
       <section className="bg-secondary">
         <div className="container py-16">
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold">Core Concepts at a Glance</h2>
+            <h2 className="text-3xl font-bold">Explore the Academy</h2>
             <p className="mt-2 text-muted-foreground">
-              Start with the fundamentals of IAM.
+              Dive into the key areas of IAM for Agentic AI.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {concepts.map((concept) => (
-              <Card key={concept.title} className="flex flex-col">
+            {featuredSections.map((section) => (
+              <Card key={section.title} className="flex flex-col">
                 <CardHeader>
-                  <CardTitle>{concept.title}</CardTitle>
-                  <CardDescription>{concept.description}</CardDescription>
+                  <CardTitle>{section.title}</CardTitle>
+                  <CardDescription>{section.description}</CardDescription>
                 </CardHeader>
                 <CardFooter className="mt-auto">
                   <Button variant="outline" asChild className="w-full">
-                    <Link to={concept.link}>
+                    <Link to={section.link}>
                       Learn More <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
