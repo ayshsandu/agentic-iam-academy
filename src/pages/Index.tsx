@@ -12,10 +12,10 @@ import { ArrowRight } from "lucide-react";
 
 const featuredSections = [
   {
-    title: "What is Agentic AI?",
+    title: "Why IAM Matters",
     description:
-      "Understand the fundamentals of autonomous AI systems and why they matter.",
-    link: "/what-is-agentic-ai",
+      "Discover why securing the autonomous workforce is a critical first step in building safe AI systems.",
+    link: "/why-iam-matters",
   },
   {
     title: "Core IAM Concepts",
@@ -44,7 +44,7 @@ const Index = () => {
         </p>
         <div className="mt-2 flex flex-wrap justify-center gap-4">
           <Button asChild size="lg">
-            <Link to="/what-is-agentic-ai">
+            <Link to="/why-iam-matters">
               Get Started <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
