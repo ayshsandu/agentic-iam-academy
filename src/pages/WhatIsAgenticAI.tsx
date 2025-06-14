@@ -2,10 +2,13 @@
 import {
   Card,
   CardContent,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const characteristics = [
   {
@@ -74,6 +77,13 @@ const WhatIsAgenticAI = () => {
               This is where Identity and Access Management becomes critical. How do we grant these autonomous agents the permissions they need to do their jobs without giving them the keys to the entire kingdom? An agent that can book travel needs access to a payment API, but it certainly shouldn't have access to HR systems. Defining, managing, and securing the identity and permissions of these non-human workers is the core challenge this guide will help you solve.
             </p>
           </CardContent>
+          <CardFooter>
+            <Button asChild variant="outline">
+              <Link to="/why-iam-matters">
+                Learn Why IAM Matters <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </CardFooter>
         </Card>
       </div>
     </div>
