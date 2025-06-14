@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import {
   NavigationMenu,
@@ -14,6 +13,7 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 const navLinks = [
   { to: "/concepts", label: "Core Concepts" },
   { to: "/best-practices", label: "Best Practices" },
+  { to: "/scenarios", label: "Scenarios" },
   { to: "/glossary", label: "Glossary" },
   { to: "/about", label: "About" },
 ];

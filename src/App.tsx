@@ -11,6 +11,7 @@ import Concepts from "./pages/Concepts";
 import BestPractices from "./pages/BestPractices";
 import Glossary from "./pages/Glossary";
 import About from "./pages/About";
+import Scenarios from "./pages/Scenarios";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
             <Route index element={<Index />} />
             <Route path="/concepts" element={<Concepts />} />
             <Route path="/best-practices" element={<BestPractices />} />
+            <Route path="/scenarios" element={<Scenarios />} />
             <Route path="/glossary" element={<Glossary />} />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
