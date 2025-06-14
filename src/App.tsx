@@ -14,6 +14,7 @@ import About from "./pages/About";
 import Scenarios from "./pages/Scenarios";
 import WhatIsAgenticAI from "./pages/WhatIsAgenticAI";
 import WhyIAMMatters from "./pages/WhyIAMMatters";
+import AgentIdentityProblem from "./pages/AgentIdentityProblem";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
             <Route index element={<Index />} />
             <Route path="/what-is-agentic-ai" element={<WhatIsAgenticAI />} />
             <Route path="/why-iam-matters" element={<WhyIAMMatters />} />
+            <Route path="/agent-identity-problem" element={<AgentIdentityProblem />} />
             <Route path="/concepts" element={<Concepts />} />
             <Route path="/best-practices" element={<BestPractices />} />
             <Route path="/scenarios" element={<Scenarios />} />
