@@ -1,11 +1,17 @@
-
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Blocks, ServerCog, UserRoundCog } from "lucide-react";
+import {
+  Blocks,
+  ServerCog,
+  UserRoundCog,
+  Workflow,
+  CloudCog,
+  BadgeCheck,
+} from "lucide-react";
 
 const scenarios = [
   {
@@ -34,6 +40,33 @@ const scenarios = [
     solution:
       "Use the OAuth 2.0 Authorization Code flow with PKCE. The user logs in once and grants consent (scopes) to the agent. The agent receives a refresh token to maintain access without repeatedly asking the user to log in.",
     why: "This is the standard for delegated authorization. It ensures the user is in control, can revoke access at any time, and never shares their password with the agent.",
+  },
+  {
+    icon: Workflow,
+    title: "Securing Agent-to-Agent Communication",
+    problem:
+      "In a multi-agent system (e.g., a 'researcher' agent passing findings to a 'writer' agent), how do you ensure that communication is secure and that agents can trust each other's identities?",
+    solution:
+      "Use a service mesh with mutual TLS (mTLS). Each agent gets a short-lived cryptographic identity (like a SPIFFE SVID) from a workload attestation service (like SPIRE). All communication is then automatically encrypted and authenticated using these identities.",
+    why: "This removes the need for managing API keys or other secrets in the agent code. It provides strong, verifiable identities for services, preventing spoofing and ensuring secure communication channels.",
+  },
+  {
+    icon: CloudCog,
+    title: "Dynamic Access for Ephemeral Compute",
+    problem:
+      "An agent is provisioned on a short-lived container or serverless function to perform a specific task (e.g., processing a batch of images). How does it get the specific, temporary permissions it needs without hardcoded credentials?",
+    solution:
+      "Use workload identity. The cloud platform (e.g., AWS, GCP, Azure) can attest to the identity of the compute instance. This identity is then used to federate with an IAM system to obtain a short-lived access token for the required resources (e.g., an S3 bucket).",
+    why: "This is a core principle of 'Just-in-Time' access. Credentials are not stored in the code or environment, are tightly scoped to the task, and expire automatically, dramatically reducing the risk of credential leakage.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Verifiable Credentials for Agent Capabilities",
+    problem:
+      "An agent from one organization needs to access sensitive data from another. How can the second organization trust that the agent is certified (e.g., 'HIPAA-compliant trained') and authorized by its owner?",
+    solution:
+      "Use W3C Verifiable Credentials (VCs). The agent's owner (the issuer) creates a digitally signed VC that asserts a claim (e.g., 'trained_on_dataset_X'). The agent (the holder) presents this VC to the other organization (the verifier), which can cryptographically verify its authenticity and integrity without needing to directly contact the issuer.",
+    why: "This provides a decentralized, privacy-preserving way to prove attributes about an agent. It's more secure and flexible than simple API keys and allows for rich, verifiable claims about an agent's provenance and capabilities.",
   },
 ];
 
