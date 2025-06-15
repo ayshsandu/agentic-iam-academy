@@ -1,4 +1,3 @@
-
 import {
   Accordion,
   AccordionContent,
@@ -37,6 +36,31 @@ const concepts = [
     title: "Principle of Least Privilege (PoLP)",
     content: "This is a fundamental security principle which dictates that an identity should only be granted the minimum permissions necessary to perform its required tasks. For AI agents, this is crucial to limit the potential damage if an agent is compromised or behaves unexpectedly. Permissions should be fine-grained and time-bound whenever possible.",
   },
+  {
+    value: "jea",
+    title: "Just-Enough-Access (JEA)",
+    content: "A modern evolution of the Principle of Least Privilege (PoLP). JEA dictates that identities should be granted permissions not only with the minimum privilege but also for the minimum time required to complete a task. For AI agents, this means dynamically generating credentials and permissions that are valid only for a specific operation and expire immediately after, often called 'just-in-time' access."
+  },
+  {
+    value: "zero-trust",
+    title: "Zero Trust Architecture (ZTA)",
+    content: "A security model built on the principle of 'never trust, always verify.' It eliminates the idea of a trusted internal network and an untrusted external network. Every access request is treated as if it originates from an untrusted source and must be strictly authenticated, authorized, and encrypted before access is granted. For agents, this means they must continuously re-verify their identity and authorization for every interaction."
+  },
+  {
+    value: "obo",
+    title: "On-Behalf-Of (OBO) Flow",
+    content: "A specific type of delegation where an application or agent needs to call a downstream service while acting on behalf of a user. The agent authenticates the user and then uses that user's identity to obtain a separate, delegated token to access the downstream service. This ensures that the downstream service can enforce permissions based on the original user's rights, maintaining a clear chain of identity."
+  },
+  {
+    value: "delegation",
+    title: "Delegation",
+    content: "The process of allowing one identity (the delegate, e.g., an AI agent) to act with the permissions of another identity (the delegator, e.g., a human user). This is fundamental for agents that perform tasks for users. The key challenge is to ensure that delegation is securely implemented, with clear constraints on what actions the delegate can perform and for how long."
+  },
+  {
+    value: "audit",
+    title: "Auditing & Observability",
+    content: "The practice of recording, monitoring, and analyzing all IAM-related events. A comprehensive audit trail logs who (or what agent) accessed what resource, when, from where, and with what permissions. For AI agents, robust and immutable audit logs are critical for security forensics, compliance, accountability, and debugging unexpected behavior."
+  }
 ];
 
 
