@@ -21,6 +21,8 @@ import EphemeralCredentials from "./pages/EphemeralCredentials";
 import SecureIntroduction from "./pages/SecureIntroduction";
 import DelegationAndImpersonation from "./pages/DelegationAndImpersonation";
 import AuditingAndObservability from "./pages/AuditingAndObservability";
+import SecuringSecretsAndTokens from "./pages/SecuringSecretsAndTokens";
+import PreventingSensitiveDataExposure from "./pages/PreventingSensitiveDataExposure";
 
 const queryClient = new QueryClient();
 
@@ -42,6 +44,8 @@ const App = () => (
             <Route path="/secure-introduction" element={<SecureIntroduction />} />
             <Route path="/delegation-and-impersonation" element={<DelegationAndImpersonation />} />
             <Route path="/auditing-and-observability" element={<AuditingAndObservability />} />
+            <Route path="/securing-secrets-and-tokens" element={<SecuringSecretsAndTokens />} />
+            <Route path="/preventing-sensitive-data-exposure" element={<PreventingSensitiveDataExposure />} />
             <Route path="/concepts" element={<Concepts />} />
             <Route path="/best-practices" element={<BestPractices />} />
             <Route path="/scenarios" element={<Scenarios />} />
