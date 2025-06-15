@@ -24,6 +24,11 @@ import AuditingAndObservability from "./pages/AuditingAndObservability";
 import SecuringSecretsAndTokens from "./pages/SecuringSecretsAndTokens";
 import PreventingSensitiveDataExposure from "./pages/PreventingSensitiveDataExposure";
 import TerminatingCompromisedAgentAccess from "./pages/TerminatingCompromisedAgentAccess";
+import JitAccess from "./pages/JitAccess";
+import PolpEnforcement from "./pages/PolpEnforcement";
+import CrossSystemIdentityPropagation from "./pages/CrossSystemIdentityPropagation";
+import SupplyChainSecurityForAgents from "./pages/SupplyChainSecurityForAgents";
+import AgentLifecycleManagement from "./pages/AgentLifecycleManagement";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +53,11 @@ const App = () => (
             <Route path="/securing-secrets-and-tokens" element={<SecuringSecretsAndTokens />} />
             <Route path="/preventing-sensitive-data-exposure" element={<PreventingSensitiveDataExposure />} />
             <Route path="/terminating-compromised-agent-access" element={<TerminatingCompromisedAgentAccess />} />
+            <Route path="/jit-access" element={<JitAccess />} />
+            <Route path="/polp-enforcement" element={<PolpEnforcement />} />
+            <Route path="/cross-system-identity-propagation" element={<CrossSystemIdentityPropagation />} />
+            <Route path="/supply-chain-security-for-agents" element={<SupplyChainSecurityForAgents />} />
+            <Route path="/agent-lifecycle-management" element={<AgentLifecycleManagement />} />
             <Route path="/concepts" element={<Concepts />} />
             <Route path="/best-practices" element={<BestPractices />} />
             <Route path="/scenarios" element={<Scenarios />} />
@@ -62,3 +72,4 @@ const App = () => (
 );
 
 export default App;
+

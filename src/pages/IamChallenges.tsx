@@ -1,7 +1,7 @@
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Fingerprint, LockKeyhole, Hourglass, Handshake, KeyRound, ListChecks, ShieldAlert, EyeOff, ShieldOff } from "lucide-react";
+import { Fingerprint, LockKeyhole, Hourglass, Handshake, KeyRound, ListChecks, ShieldAlert, EyeOff, ShieldOff, Clock, ShieldCheck, Share2, PackageCheck, Recycle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const challenges = [
@@ -68,6 +68,41 @@ const challenges = [
     href: "/terminating-compromised-agent-access",
     status: "Published",
   },
+  {
+    title: "Just-in-Time (JIT) Access",
+    description: "Dynamically providing access to resources for a limited time, only when needed.",
+    icon: Clock,
+    href: "/jit-access",
+    status: "Published",
+  },
+  {
+    title: "Principle of Least Privilege (PoLP) Enforcement",
+    description: "Ensuring agents have the minimum level of access required to perform their tasks.",
+    icon: ShieldCheck,
+    href: "/polp-enforcement",
+    status: "Published",
+  },
+  {
+    title: "Cross-System Identity Propagation",
+    description: "Securely propagating an agent's identity and context across different services and platforms.",
+    icon: Share2,
+    href: "/cross-system-identity-propagation",
+    status: "Published",
+  },
+  {
+    title: "Supply Chain Security for Agents",
+    description: "Verifying the integrity and origin of the agent's code and its dependencies.",
+    icon: PackageCheck,
+    href: "/supply-chain-security-for-agents",
+    status: "Published",
+  },
+  {
+    title: "Agent Lifecycle Management",
+    description: "Securely creating, managing, and decommissioning agents.",
+    icon: Recycle,
+    href: "/agent-lifecycle-management",
+    status: "Published",
+  },
 ];
 
 const IamChallenges = () => {
@@ -118,3 +153,4 @@ const IamChallenges = () => {
 };
 
 export default IamChallenges;
+
