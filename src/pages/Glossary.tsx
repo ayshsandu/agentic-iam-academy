@@ -1,12 +1,19 @@
 
+import { useState } from "react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Input } from "@/components/ui/input";
 
 const terms = [
+  {
+    value: "abac",
+    title: "ABAC (Attribute-Based Access Control)",
+    content: "An access control model where authorization decisions are based on attributes associated with the subject, object, resource, and environment, evaluated against policies. It allows for highly granular and context-aware permissions.",
+  },
   {
     value: "api-key",
     title: "API Key",
@@ -23,6 +30,11 @@ const terms = [
     content: "A compact, URL-safe standard for creating access tokens that assert a number of claims. A JWT is digitally signed, allowing the receiver to verify its authenticity and integrity. Often used in OAuth 2.0 and OIDC flows.",
   },
   {
+    value: "mtls",
+    title: "mTLS (Mutual TLS)",
+    content: "Mutual Transport Layer Security. A method of mutual authentication where both parties in a network connection (e.g., two agents) validate each other's certificates before establishing a secure communication channel.",
+  },
+  {
     value: "oauth2",
     title: "OAuth 2.0",
     content: "An authorization framework that enables applications (like AI agents) to obtain limited access to user accounts on an HTTP service. It delegates authorization from the user to the application without sharing credentials.",
@@ -31,6 +43,16 @@ const terms = [
     value: "oidc",
     title: "OpenID Connect (OIDC)",
     content: "An identity layer built on top of the OAuth 2.0 framework. It allows clients to verify the identity of the end-user based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the end-user.",
+  },
+  {
+    value: "opa",
+    title: "OPA (Open Policy Agent)",
+    content: "An open-source, general-purpose policy engine that enables you to decouple policy decision-making from your service's code. Used for fine-grained, context-aware authorization.",
+  },
+  {
+    value: "rbac",
+    title: "RBAC (Role-Based Access Control)",
+    content: "An access control model where permissions are assigned to roles, and users (or agents) are assigned to roles, inheriting their permissions. It is simpler than ABAC but less flexible.",
   },
   {
     value: "saml",
@@ -42,10 +64,35 @@ const terms = [
     title: "Scope",
     content: "In OAuth 2.0, scopes are used to specify the exact permissions an application is requesting. For example, 'read:email' or 'write:calendar'. This aligns with the Principle of Least Privilege.",
   },
+  {
+    value: "spiffe",
+    title: "SPIFFE",
+    content: "Secure Production Identity Framework for Everyone. A set of open-source standards for securely identifying software services in dynamic and heterogeneous environments, without the need for application-level secrets.",
+  },
+  {
+    value: "spire",
+    title: "SPIRE",
+    content: "The SPIFFE Runtime Environment. An open-source reference implementation of the SPIFFE specification that acts as a trust anchor, attesting workloads and issuing them with cryptographic identities (SVIDs).",
+  },
+  {
+    value: "svid",
+    title: "SVID (SPIFFE Verifiable Identity Document)",
+    content: "A cryptographic identity document (either an X.509 certificate or a JWT) that contains a service's unique SPIFFE ID, allowing it to be securely identified by other services.",
+  },
 ];
 
 
 const Glossary = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const sortedTerms = terms.sort((a, b) => a.title.localeCompare(b.title));
+
+  const filteredTerms = sortedTerms.filter(
+    (term) =>
+      term.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      term.content.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="container py-8 md:py-12">
       <h1 className="text-4xl font-bold tracking-tight">Glossary</h1>
@@ -54,8 +101,15 @@ const Glossary = () => {
         navigate the jargon.
       </p>
       <div className="mt-8 max-w-3xl">
+        <Input
+          type="text"
+          placeholder="Search terms..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="mb-6"
+        />
         <Accordion type="single" collapsible className="w-full">
-          {terms.sort((a, b) => a.title.localeCompare(b.title)).map((term) => (
+          {filteredTerms.map((term) => (
             <AccordionItem value={term.value} key={term.value}>
               <AccordionTrigger className="text-xl text-left">
                 {term.title}
