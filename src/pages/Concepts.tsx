@@ -1,3 +1,4 @@
+
 import {
   Accordion,
   AccordionContent,
@@ -60,6 +61,36 @@ const concepts = [
     value: "audit",
     title: "Auditing & Observability",
     content: "The practice of recording, monitoring, and analyzing all IAM-related events. A comprehensive audit trail logs who (or what agent) accessed what resource, when, from where, and with what permissions. For AI agents, robust and immutable audit logs are critical for security forensics, compliance, accountability, and debugging unexpected behavior."
+  },
+  {
+    value: "multi-tenancy",
+    title: "Multi-Tenant Agent Platform",
+    content: "In a multi-tenant platform, multiple customers (tenants) and their agents co-exist on shared infrastructure. Strong IAM is essential to enforce strict isolation between tenants, ensuring that one tenant's agents cannot access the data or resources of another. This involves tenant-specific roles, permissions, and data encryption keys.",
+  },
+  {
+    value: "agent-to-agent",
+    title: "Agent-to-Agent Communication",
+    content: "When agents need to collaborate, they must be able to securely communicate with each other. This requires a mechanism for agents to discover, authenticate, and authorize communication with other agents. Mutual TLS (mTLS) with short-lived certificates, based on verifiable agent identities (like SPIFFE SVIDs), is a common pattern to establish secure and trusted channels.",
+  },
+  {
+    value: "compliance",
+    title: "Compliance & Governance",
+    content: "Organizations must ensure that their AI agents operate in compliance with legal, regulatory, and internal policy requirements (e.g., GDPR, HIPAA). IAM plays a vital role by enforcing data access policies, providing comprehensive audit logs to prove compliance, and managing agent permissions to prevent unauthorized actions. Governance frameworks define the rules, roles, and responsibilities for managing agent identities and access throughout their lifecycle.",
+  },
+  {
+    value: "lifecycle",
+    title: "Identity Lifecycle Management",
+    content: "This refers to the complete process of managing an agent's identity from creation to deletion. It includes provisioning (creating the identity and initial permissions), maintenance (updating attributes or roles), and de-provisioning (securely revoking access and deleting the identity when the agent is retired). Automating this lifecycle is crucial for security and operational efficiency.",
+  },
+  {
+    value: "dynamic-permissions",
+    title: "Dynamic Permissions",
+    content: "Instead of granting static, long-lived permissions, dynamic permissions are granted on-the-fly based on the specific context of a task. This aligns with Just-in-Time (JIT) access principles. For example, an agent might request and receive temporary permission to access a specific customer record only for the duration of handling a support ticket, with the permission being automatically revoked upon completion.",
+  },
+  {
+    value: "verifiable-credentials",
+    title: "Verifiable Credentials",
+    content: "VCs are a W3C standard for tamper-evident, machine-verifiable digital credentials. An issuer (e.g., a university) can issue a credential (e.g., a diploma) to a holder (e.g., a person or agent), who can then present it to a verifier (e.g., an employer) to prove a claim. For agents, VCs can be used to prove attributes like their capabilities, training data provenance, or authorization from their owner, in a decentralized and privacy-preserving way.",
   }
 ];
 
