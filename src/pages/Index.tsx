@@ -24,10 +24,10 @@ const featuredSections = [
     link: "/concepts",
   },
   {
-    title: "Security Best Practices",
+    title: "IAM Challenges",
     description:
-      "Discover industry-standard practices for securing your AI agents.",
-    link: "/best-practices",
+      "A deep dive into the core challenges of securing autonomous agents, from identity to auditing.",
+    link: "/iam-challenges",
   },
 ];
 
