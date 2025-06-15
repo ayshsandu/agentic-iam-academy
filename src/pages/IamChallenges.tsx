@@ -1,7 +1,7 @@
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Fingerprint, LockKeyhole, Hourglass, Handshake, KeyRound, ListChecks, ShieldAlert, EyeOff } from "lucide-react";
+import { Fingerprint, LockKeyhole, Hourglass, Handshake, KeyRound, ListChecks, ShieldAlert, EyeOff, ShieldOff } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const challenges = [
@@ -59,6 +59,13 @@ const challenges = [
     description: "How to ensure that prompts sent to third-party LLM providers are sanitized of Personally Identifiable Information (PII) and other confidential data.",
     icon: EyeOff,
     href: "/preventing-sensitive-data-exposure",
+    status: "Published",
+  },
+  {
+    title: "Terminating Compromised Agent Access",
+    description: "How to rapidly and reliably revoke an agent's access when it's suspected of being compromised.",
+    icon: ShieldOff,
+    href: "/terminating-compromised-agent-access",
     status: "Published",
   },
 ];

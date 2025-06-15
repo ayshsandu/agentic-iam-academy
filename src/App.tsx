@@ -23,6 +23,7 @@ import DelegationAndImpersonation from "./pages/DelegationAndImpersonation";
 import AuditingAndObservability from "./pages/AuditingAndObservability";
 import SecuringSecretsAndTokens from "./pages/SecuringSecretsAndTokens";
 import PreventingSensitiveDataExposure from "./pages/PreventingSensitiveDataExposure";
+import TerminatingCompromisedAgentAccess from "./pages/TerminatingCompromisedAgentAccess";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +47,7 @@ const App = () => (
             <Route path="/auditing-and-observability" element={<AuditingAndObservability />} />
             <Route path="/securing-secrets-and-tokens" element={<SecuringSecretsAndTokens />} />
             <Route path="/preventing-sensitive-data-exposure" element={<PreventingSensitiveDataExposure />} />
+            <Route path="/terminating-compromised-agent-access" element={<TerminatingCompromisedAgentAccess />} />
             <Route path="/concepts" element={<Concepts />} />
             <Route path="/best-practices" element={<BestPractices />} />
             <Route path="/scenarios" element={<Scenarios />} />
