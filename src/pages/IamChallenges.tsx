@@ -1,7 +1,6 @@
-
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Fingerprint, LockKeyhole, Hourglass, Handshake, KeyRound, ListChecks } from "lucide-react";
+import { Fingerprint, LockKeyhole, Hourglass, Handshake, KeyRound, ListChecks, ShieldAlert, EyeOff } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const challenges = [
@@ -46,6 +45,18 @@ const challenges = [
     icon: ListChecks,
     href: "/auditing-and-observability",
     status: "Published",
+  },
+  {
+    title: "Securing Secrets & Tokens",
+    description: "How to securely store, transmit, and manage sensitive credentials like API keys, OAuth tokens, and service account keys.",
+    icon: ShieldAlert,
+    status: "Coming Soon",
+  },
+  {
+    title: "Preventing Sensitive Data Exposure to LLMs",
+    description: "How to ensure that prompts sent to third-party LLM providers are sanitized of Personally Identifiable Information (PII) and other confidential data.",
+    icon: EyeOff,
+    status: "Coming Soon",
   },
 ];
 
