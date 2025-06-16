@@ -77,7 +77,7 @@ const Index = () => {
           </p>
           
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="glass-effect glow-effect group">
+            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 border border-primary/50 shadow-lg hover:shadow-xl transition-all duration-300 group">
               <Link to="/what-is-agentic-ai">
                 Get Started 
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
