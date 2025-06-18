@@ -108,49 +108,172 @@ const challenges = [
 const IamChallenges = () => {
   return (
     <div className="container max-w-6xl py-8 md:py-12">
-      <h1 className="text-4xl font-bold tracking-tight">The Core Challenges of Agentic IAM</h1>
-      <p className="mt-4 text-lg text-muted-foreground">
-        Securing an autonomous workforce requires solving a set of interconnected challenges. This is our guide to understanding them.
-      </p>
+      <div className="mb-12">
+        <h1 className="text-4xl font-bold tracking-tight mb-4">The Core Challenges of Agentic IAM</h1>
+        <p className="text-lg text-muted-foreground">
+          Securing an autonomous workforce requires solving a set of interconnected challenges. This is our guide to understanding them.
+        </p>
+      </div>
 
-      <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {challenges.map((challenge) => {
-          const cardContent = (
-            <Card
-              className={`flex h-full flex-col transition-all ${
-                challenge.href
-                  ? "hover:border-primary hover:shadow-lg"
-                  : "bg-muted/30"
-              }`}
-            >
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                    <challenge.icon className={`h-8 w-8 mb-4 ${challenge.href ? 'text-primary' : 'text-muted-foreground'}`} />
-                    <Badge variant={challenge.href ? "default" : "secondary"}>
-                      {challenge.status}
-                    </Badge>
-                </div>
-                <CardTitle>{challenge.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-muted-foreground">{challenge.description}</p>
-              </CardContent>
-            </Card>
-          );
+      <div className="space-y-12">
+        <section>
+          <h2 className="text-2xl font-semibold tracking-tight mb-6">Identity & Authentication Challenges</h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            {challenges.slice(0, 3).map((challenge) => {
+              const cardContent = (
+                <Card
+                  className={`flex h-full flex-col transition-all ${
+                    challenge.href
+                      ? "hover:border-primary hover:shadow-lg"
+                      : "bg-muted/30"
+                  }`}
+                >
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                        <challenge.icon className={`h-8 w-8 mb-4 ${challenge.href ? 'text-primary' : 'text-muted-foreground'}`} />
+                        <Badge variant={challenge.href ? "default" : "secondary"}>
+                          {challenge.status}
+                        </Badge>
+                    </div>
+                    <CardTitle className="text-xl">{challenge.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground">{challenge.description}</p>
+                  </CardContent>
+                </Card>
+              );
 
-          if (challenge.href) {
-            return (
-              <Link to={challenge.href} key={challenge.title} className="focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg">
-                {cardContent}
-              </Link>
-            );
-          }
-          return <div key={challenge.title}>{cardContent}</div>;
-        })}
+              if (challenge.href) {
+                return (
+                  <Link to={challenge.href} key={challenge.title} className="focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg">
+                    {cardContent}
+                  </Link>
+                );
+              }
+              return <div key={challenge.title}>{cardContent}</div>;
+            })}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold tracking-tight mb-6">Authorization & Access Control Challenges</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {challenges.slice(3, 8).map((challenge) => {
+              const cardContent = (
+                <Card
+                  className={`flex h-full flex-col transition-all ${
+                    challenge.href
+                      ? "hover:border-primary hover:shadow-lg"
+                      : "bg-muted/30"
+                  }`}
+                >
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                        <challenge.icon className={`h-8 w-8 mb-4 ${challenge.href ? 'text-primary' : 'text-muted-foreground'}`} />
+                        <Badge variant={challenge.href ? "default" : "secondary"}>
+                          {challenge.status}
+                        </Badge>
+                    </div>
+                    <CardTitle className="text-xl">{challenge.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground">{challenge.description}</p>
+                  </CardContent>
+                </Card>
+              );
+
+              if (challenge.href) {
+                return (
+                  <Link to={challenge.href} key={challenge.title} className="focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg">
+                    {cardContent}
+                  </Link>
+                );
+              }
+              return <div key={challenge.title}>{cardContent}</div>;
+            })}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold tracking-tight mb-6">Security & Risk Management Challenges</h2>
+          <div className="grid gap-6 md:grid-cols-2">
+            {challenges.slice(8, 11).map((challenge) => {
+              const cardContent = (
+                <Card
+                  className={`flex h-full flex-col transition-all ${
+                    challenge.href
+                      ? "hover:border-primary hover:shadow-lg"
+                      : "bg-muted/30"
+                  }`}
+                >
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                        <challenge.icon className={`h-8 w-8 mb-4 ${challenge.href ? 'text-primary' : 'text-muted-foreground'}`} />
+                        <Badge variant={challenge.href ? "default" : "secondary"}>
+                          {challenge.status}
+                        </Badge>
+                    </div>
+                    <CardTitle className="text-xl">{challenge.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground">{challenge.description}</p>
+                  </CardContent>
+                </Card>
+              );
+
+              if (challenge.href) {
+                return (
+                  <Link to={challenge.href} key={challenge.title} className="focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg">
+                    {cardContent}
+                  </Link>
+                );
+              }
+              return <div key={challenge.title}>{cardContent}</div>;
+            })}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold tracking-tight mb-6">Operational & Governance Challenges</h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {challenges.slice(11).map((challenge) => {
+              const cardContent = (
+                <Card
+                  className={`flex h-full flex-col transition-all ${
+                    challenge.href
+                      ? "hover:border-primary hover:shadow-lg"
+                      : "bg-muted/30"
+                  }`}
+                >
+                  <CardHeader>
+                    <div className="flex items-start justify-between">
+                        <challenge.icon className={`h-8 w-8 mb-4 ${challenge.href ? 'text-primary' : 'text-muted-foreground'}`} />
+                        <Badge variant={challenge.href ? "default" : "secondary"}>
+                          {challenge.status}
+                        </Badge>
+                    </div>
+                    <CardTitle className="text-xl">{challenge.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className="flex-grow">
+                    <p className="text-muted-foreground">{challenge.description}</p>
+                  </CardContent>
+                </Card>
+              );
+
+              if (challenge.href) {
+                return (
+                  <Link to={challenge.href} key={challenge.title} className="focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg">
+                    {cardContent}
+                  </Link>
+                );
+              }
+              return <div key={challenge.title}>{cardContent}</div>;
+            })}
+          </div>
+        </section>
       </div>
     </div>
   );
 };
 
 export default IamChallenges;
-
