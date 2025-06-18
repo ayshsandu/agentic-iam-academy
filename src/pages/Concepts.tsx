@@ -90,7 +90,7 @@ const concepts = [
   {
     value: "agent-to-agent",
     title: "Agent-to-Agent Communication",
-    content: "When agents need to collaborate, they must be able to securely communicate with each other. This requires a mechanism for agents to discover, authenticate, and authorize communication with other agents. Mutual TLS (mTLS) with short-lived certificates, based on verifiable agent identities (like SPIFFE SVIDs), is a common pattern to establish secure and trusted channels.",
+    content: "When agents need to collaborate, they must be able to securely communicate with each other. This requires a mechanism for agents to discover, authenticate, and authorize communication with other agents. Mutual TLS (mTLS) with short-lived certificates, based on verifiable agent identities, is a common pattern to establish secure and trusted channels.",
   },
 ];
 

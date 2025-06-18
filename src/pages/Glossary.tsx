@@ -64,21 +64,6 @@ const terms = [
     title: "Scope",
     content: "In OAuth 2.0, scopes are used to specify the exact permissions an application is requesting. For example, 'read:email' or 'write:calendar'. This aligns with the Principle of Least Privilege.",
   },
-  {
-    value: "spiffe",
-    title: "SPIFFE",
-    content: "Secure Production Identity Framework for Everyone. A set of open-source standards for securely identifying software services in dynamic and heterogeneous environments, without the need for application-level secrets.",
-  },
-  {
-    value: "spire",
-    title: "SPIRE",
-    content: "The SPIFFE Runtime Environment. An open-source reference implementation of the SPIFFE specification that acts as a trust anchor, attesting workloads and issuing them with cryptographic identities (SVIDs).",
-  },
-  {
-    value: "svid",
-    title: "SVID (SPIFFE Verifiable Identity Document)",
-    content: "A cryptographic identity document (either an X.509 certificate or a JWT) that contains a service's unique SPIFFE ID, allowing it to be securely identified by other services.",
-  },
 ];
 
 

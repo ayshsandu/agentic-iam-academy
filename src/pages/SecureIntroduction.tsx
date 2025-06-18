@@ -16,17 +16,18 @@ const SecureIntroduction = () => {
         <p>
           The solution relies on a common "trust anchor" - a system that both parties already trust. This could be a cloud provider's metadata service, a Kubernetes API server, or a dedicated identity provider. The trust anchor is responsible for vetting the identity of each party and issuing a cryptographic identity document, such as an X.509 certificate or a JWT.
         </p>
-        <h2 className="text-2xl font-semibold pt-4">A Common Protocol: SPIFFE/SPIRE</h2>
+        <h2 className="text-2xl font-semibold pt-4">Common Approaches</h2>
         <p>
-          The Secure Production Identity Framework for Everyone (SPIFFE) and its reference implementation, the SPIFFE Runtime Environment (SPIRE), provide an open-source standard for solving this problem.
+          Several approaches can be used to solve the secure introduction problem:
         </p>
         <ul className="list-disc space-y-2 pl-6">
-          <li><strong>SPIRE Server:</strong> Acts as the trust anchor. It's responsible for attesting the identity of workloads (agents, services) and issuing SPIFFE Verifiable Identity Documents (SVIDs) to them.</li>
-          <li><strong>SPIRE Agent:</strong> A daemon that runs on each node. It performs node and workload attestation, requests SVIDs from the server on behalf of workloads, and exposes them through a local API (the Workload API).</li>
-          <li><strong>SVID:</strong> A cryptographic identity document (either an X.509 certificate or a JWT) that contains the agent's unique SPIFFE ID.</li>
+          <li><strong>Certificate Authority (CA) based systems:</strong> A trusted CA issues certificates to agents, which can then be used for mutual authentication.</li>
+          <li><strong>Cloud provider identity services:</strong> Services like AWS IAM Roles, Azure Managed Identity, or Google Cloud Service Accounts can provide cryptographic identity documents.</li>
+          <li><strong>Hardware Security Modules (HSMs):</strong> For high-security environments, HSMs can provide tamper-resistant identity storage and cryptographic operations.</li>
+          <li><strong>Distributed identity frameworks:</strong> Various open-source and commercial solutions provide standardized approaches to workload identity management.</li>
         </ul>
         <p>
-          When two agents need to communicate, they can present their SVIDs to each other. By validating the SVID against the trust anchor's public key, they can establish a mutually authenticated and encrypted communication channel (mTLS) without needing any pre-configured secrets.
+          When two agents need to communicate, they can present their cryptographic identity documents to each other. By validating these documents against the trust anchor's public key, they can establish a mutually authenticated and encrypted communication channel (mTLS) without needing any pre-configured secrets.
         </p>
       </div>
     </div>
