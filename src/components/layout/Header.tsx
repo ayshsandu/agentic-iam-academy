@@ -13,11 +13,10 @@ import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 
 const navLinks = [
   { to: "/what-is-agentic-ai", label: "Agentic AI" },
-  { to: "/iam-challenges", label: "IAM Challenges" },
+  { to: "/iam-challenges", label: "Challenges" },
   { to: "/concepts", label: "Core Concepts" },
   { to: "/best-practices", label: "Best Practices" },
   { to: "/scenarios", label: "Scenarios" },
-  { to: "/glossary", label: "Glossary" },
   { to: "/about", label: "About" },
 ];
 

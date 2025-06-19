@@ -19,14 +19,14 @@ const featuredSections = [
     icon: Shield,
   },
   {
-    title: "Core IAM Concepts",
+    title: "Core Concepts",
     description:
-      "Explore the building blocks of Identity and Access Management for AI.",
+      "Explore the building blocks of Identity and Access Management for AI, including essential terminology.",
     link: "/concepts",
     icon: Brain,
   },
   {
-    title: "IAM Challenges",
+    title: "Challenges",
     description:
       "A deep dive into the core challenges of securing autonomous agents, from identity to auditing.",
     link: "/iam-challenges",
@@ -56,9 +56,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,hsl(var(--primary))_0%,transparent_50%)] opacity-10"></div>
+      <section className="relative overflow-hidden hero-gradient">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,hsl(var(--primary))_0%,transparent_50%)] opacity-5"></div>
         
         <div className="container relative grid place-items-center gap-8 py-20 text-center md:py-32">
           <div className="animate-float">
@@ -77,7 +76,7 @@ const Index = () => {
           </p>
           
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 border border-primary/50 shadow-lg hover:shadow-xl transition-all duration-300 group">
+            <Button asChild size="lg" className="modern-button">
               <Link to="/what-is-agentic-ai">
                 Get Started 
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -88,13 +87,13 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-gradient-to-b from-background to-secondary/20">
+      <section className="py-16 bg-gradient-to-b from-background to-gray-50/50">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-3">
             {features.map((feature, index) => (
               <div 
                 key={feature.title} 
-                className="glass-effect rounded-lg p-6 text-center group hover:glow-effect transition-all duration-300"
+                className="modern-card p-6 text-center group hover:glow-effect"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <feature.icon className="h-12 w-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
@@ -107,7 +106,7 @@ const Index = () => {
       </section>
 
       {/* Academy Section */}
-      <section className="bg-secondary/30 backdrop-blur-sm">
+      <section className="bg-gray-50/30 backdrop-blur-sm">
         <div className="container py-20">
           <div className="mb-12 text-center">
             <h2 className="text-3xl font-bold mb-4">
@@ -123,7 +122,7 @@ const Index = () => {
             {featuredSections.map((section, index) => (
               <Card 
                 key={section.title} 
-                className="glass-effect group hover:glow-effect transition-all duration-300 border-border/50 hover:border-primary/50"
+                className="modern-card group hover:glow-effect border-gray-200/60"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="text-center">
@@ -150,7 +149,7 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gradient-to-r from-primary/10 via-background to-primary/10">
+      <section className="py-20 hero-gradient">
         <div className="container text-center">
           <h2 className="text-3xl font-bold mb-4">
             Ready to Secure the <span className="gradient-text">Agentic Future</span>?
@@ -158,7 +157,7 @@ const Index = () => {
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join the community of developers building the secure foundation for autonomous AI systems.
           </p>
-          <Button asChild size="lg" className="glow-effect">
+          <Button asChild size="lg" className="modern-button glow-effect">
             <Link to="/concepts">
               Start Learning
               <ArrowRight className="ml-2 h-4 w-4" />
