@@ -66,7 +66,7 @@ const Index = () => {
           
           <h1 className="text-4xl font-bold tracking-tight lg:text-6xl xl:text-7xl max-w-4xl">
             Mastering <span className="gradient-text">IAM</span> for{" "}
-            <span className="gradient-text">Agentic AI</span> Developers
+            <span className="gradient-text">Agentic AI</span>
           </h1>
           
           <p className="max-w-3xl text-lg text-muted-foreground md:text-xl leading-relaxed">
