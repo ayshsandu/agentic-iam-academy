@@ -1,13 +1,20 @@
 
+import { Link } from "react-router-dom";
+
 const SecureIntroduction = () => {
   return (
     <div className="container max-w-4xl py-8 md:py-12">
-      <h1 className="text-4xl font-bold tracking-tight">
-        Challenge: Secure Introduction
-      </h1>
-      <p className="mt-4 text-lg text-muted-foreground">
-        How two agents, or an agent and a service, can establish a trusted relationship for the first time.
-      </p>
+      <div className="mb-8">
+        <Link to="/iam-challenges" className="text-sm text-primary hover:underline">
+          &larr; Back
+        </Link>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight">
+          Challenge: Secure Introduction
+        </h1>
+        <p className="mt-4 text-lg text-muted-foreground">
+          How two agents, or an agent and a service, can establish a trusted relationship for the first time.
+        </p>
+      </div>
       <div className="mt-8 space-y-6 text-base md:text-lg">
         <p>
           When a new agent is deployed or needs to communicate with a new service, how do they securely establish trust? This "secure introduction" problem, also known as bootstrapping trust, is a critical first step. Without a secure process, an attacker could impersonate a legitimate agent or service, leading to a man-in-the-middle (MITM) attack.

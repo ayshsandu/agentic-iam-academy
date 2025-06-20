@@ -29,6 +29,7 @@ import PolpEnforcement from "./pages/PolpEnforcement";
 import CrossSystemIdentityPropagation from "./pages/CrossSystemIdentityPropagation";
 import SupplyChainSecurityForAgents from "./pages/SupplyChainSecurityForAgents";
 import AgentLifecycleManagement from "./pages/AgentLifecycleManagement";
+import ScrollToTop from "./components/shared/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route element={<Layout />}>
             <Route index element={<Index />} />

@@ -12,10 +12,15 @@ import { Link } from "react-router-dom";
 const AgentIdentityProblem = () => {
   return (
     <div className="container max-w-4xl py-8 md:py-12">
-      <h1 className="text-4xl font-bold tracking-tight">Deep Dive: The Agent Identity Problem</h1>
-      <p className="mt-4 text-lg text-muted-foreground">
-        Let's explore one of the most fundamental challenges: establishing a trustworthy identity for a non-human entity.
-      </p>
+      <div className="mb-8">
+        <Link to="/iam-challenges" className="text-sm text-primary hover:underline">
+          &larr; Back
+        </Link>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight">Deep Dive: The Agent Identity Problem</h1>
+        <p className="mt-4 text-lg text-muted-foreground">
+          Let's explore one of the most fundamental challenges: establishing a trustworthy identity for a non-human entity.
+        </p>
+      </div>
       <div className="mt-12 space-y-6">
         <Card>
           <CardHeader>

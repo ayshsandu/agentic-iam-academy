@@ -1,13 +1,20 @@
 
+import { Link } from "react-router-dom";
+
 const DelegationAndImpersonation = () => {
   return (
     <div className="container max-w-4xl py-8 md:py-12">
-      <h1 className="text-4xl font-bold tracking-tight">
-        Challenge: Delegation & Impersonation
-      </h1>
-      <p className="mt-4 text-lg text-muted-foreground">
-        How an agent can safely act on behalf of a user, with clearly defined and auditable constraints.
-      </p>
+      <div className="mb-8">
+        <Link to="/iam-challenges" className="text-sm text-primary hover:underline">
+          &larr; Back
+        </Link>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight">
+          Challenge: Delegation & Impersonation
+        </h1>
+        <p className="mt-4 text-lg text-muted-foreground">
+          How an agent can safely act on behalf of a user, with clearly defined and auditable constraints.
+        </p>
+      </div>
 
       <div className="mt-8 space-y-6 text-base md:text-lg">
         <p>

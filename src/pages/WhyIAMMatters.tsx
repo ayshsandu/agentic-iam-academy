@@ -113,7 +113,7 @@ const WhyIAMMatters = () => {
 
         <Card className="bg-secondary">
           <CardHeader>
-            <CardTitle>Why This Guide Exists</CardTitle>
+            <CardTitle>Why This Guide Exists?</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">

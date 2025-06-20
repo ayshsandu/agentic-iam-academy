@@ -13,7 +13,7 @@ import {
       <div className="container max-w-4xl py-8 md:py-12">
         <div className="mb-8">
           <Link to="/iam-challenges" className="text-sm text-primary hover:underline">
-            &larr; Back to IAM Challenges
+            &larr; Back
           </Link>
           <h1 className="mt-2 text-4xl font-bold tracking-tight">
             Preventing Sensitive Data Exposure to LLMs
