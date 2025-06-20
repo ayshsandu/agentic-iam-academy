@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { ArrowRight, BookOpen, Bot, Shield, Zap, Brain, Lock, Eye, GraduationCap, Users, Award } from "lucide-react";
+import { ArrowRight, BookOpen, Bot, Shield, Zap, Brain, Lock, Eye, GraduationCap, Users, Award, Github, Heart } from "lucide-react";
 
 const featuredSections = [
   {
@@ -222,6 +222,65 @@ const Index = () => {
                   Explore Challenges
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contribute Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-6">
+              <Heart className="h-16 w-16 text-orange-600 mx-auto mb-4" />
+            </div>
+            <h2 className="text-3xl font-bold mb-4 text-foreground">
+              Let's <span className="text-orange-600">Contribute</span> Together
+            </h2>
+            <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
+              This open-source educational platform is built by the community, for the community. 
+              Whether you're fixing typos, adding new content, improving examples, or suggesting new topics, 
+              every contribution helps advance AI security knowledge 
+              and shapes the future of autonomous agent security.
+            </p>
+            
+            <div className="grid gap-6 md:grid-cols-3 mb-8">
+              <div className="text-center p-6">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <BookOpen className="h-6 w-6 text-orange-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Content & Examples</h3>
+                <p className="text-muted-foreground text-sm">Add new tutorials, improve explanations, or contribute real-world examples and case studies.</p>
+              </div>
+              <div className="text-center p-6">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Brain className="h-6 w-6 text-orange-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Code & Features</h3>
+                <p className="text-muted-foreground text-sm">Enhance the platform with new features, interactive elements, or technical improvements.</p>
+              </div>
+              <div className="text-center p-6">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Users className="h-6 w-6 text-orange-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Community & Feedback</h3>
+                <p className="text-muted-foreground text-sm">Share feedback, report issues, suggest improvements, or help moderate discussions.</p>
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button asChild size="lg" className="modern-button text-base px-8 py-3 h-auto">
+                <a href="https://github.com/ayshsandu/agentic-iam-academy" target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" />
+                  Contribute on GitHub
+                </a>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-base px-8 py-3 h-auto border-orange-200 text-orange-700 hover:bg-orange-50">
+                <a href="https://github.com/ayshsandu/agentic-iam-academy/issues" target="_blank" rel="noopener noreferrer">
+                  Report Issues
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
               </Button>
             </div>
           </div>
