@@ -1,7 +1,6 @@
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Fingerprint, LockKeyhole, Hourglass, Handshake, KeyRound, ListChecks, ShieldAlert, EyeOff, ShieldOff, Clock, ShieldCheck, Share2, PackageCheck, Recycle } from "lucide-react";
+import { Fingerprint, LockKeyhole, Hourglass, Handshake, KeyRound, ListChecks, ShieldAlert, EyeOff, ShieldOff, Clock, ShieldCheck, Share2, PackageCheck, Recycle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const challenges = [
@@ -10,98 +9,84 @@ const challenges = [
     description: "How do you verify that an autonomous agent is truly who it claims to be in a distributed system?",
     icon: Fingerprint,
     href: "/agent-identity-problem",
-    status: "Published",
   },
   {
     title: "Dynamic Authorization",
     description: "How do you make real-time access decisions when an agent's required permissions constantly change based on context?",
     icon: LockKeyhole,
     href: "/dynamic-authorization",
-    status: "Published",
   },
   {
     title: "Ephemeral Credentials",
     description: "How do you securely authenticate agents that exist for only seconds without leaving long-lived credentials vulnerable?",
     icon: Hourglass,
     href: "/ephemeral-credentials",
-    status: "Published",
   },
   {
     title: "Secure Introduction",
     description: "How do two agents establish trust when they've never interacted before and have no shared secrets?",
     icon: Handshake,
     href: "/secure-introduction",
-    status: "Published",
   },
   {
     title: "Delegation & Impersonation",
     description: "How do you allow an agent to act on behalf of a user without compromising security or losing accountability?",
     icon: KeyRound,
     href: "/delegation-and-impersonation",
-    status: "Published",
   },
   {
     title: "Auditing & Observability",
     description: "How do you track and verify every action an autonomous agent takes across distributed systems?",
     icon: ListChecks,
     href: "/auditing-and-observability",
-    status: "Published",
   },
   {
     title: "Securing Secrets & Tokens",
     description: "How do you protect sensitive credentials when agents need to access multiple services autonomously?",
     icon: ShieldAlert,
     href: "/securing-secrets-and-tokens",
-    status: "Published",
   },
   {
     title: "Preventing Sensitive Data Exposure to LLMs",
     description: "How do you ensure agents don't accidentally leak confidential information to third-party AI services?",
     icon: EyeOff,
     href: "/preventing-sensitive-data-exposure",
-    status: "Published",
   },
   {
     title: "Terminating Compromised Agent Access",
     description: "How do you quickly revoke access for a potentially compromised agent across all systems it might touch?",
     icon: ShieldOff,
     href: "/terminating-compromised-agent-access",
-    status: "Published",
   },
   {
     title: "Just-in-Time (JIT) Access",
     description: "How do you balance security with operational efficiency when agents need elevated permissions unpredictably?",
     icon: Clock,
     href: "/jit-access",
-    status: "Published",
   },
   {
     title: "Principle of Least Privilege (PoLP) Enforcement",
     description: "How do you determine and enforce the minimum permissions an agent actually needs at any given moment?",
     icon: ShieldCheck,
     href: "/polp-enforcement",
-    status: "Published",
   },
   {
     title: "Cross-System Identity Propagation",
     description: "How do you maintain an agent's identity and context as it moves through multiple interconnected services?",
     icon: Share2,
     href: "/cross-system-identity-propagation",
-    status: "Published",
   },
   {
     title: "Supply Chain Security for Agents",
     description: "How do you ensure the agent code and dependencies haven't been tampered with before deployment?",
     icon: PackageCheck,
     href: "/supply-chain-security-for-agents",
-    status: "Published",
   },
   {
     title: "Agent Lifecycle Management",
     description: "How do you securely manage agents from creation to decommissioning at scale without manual intervention?",
     icon: Recycle,
     href: "/agent-lifecycle-management",
-    status: "Published",
   },
 ];
 
@@ -129,16 +114,20 @@ const IamChallenges = () => {
                   }`}
                 >
                   <CardHeader>
-                    <div className="flex items-start justify-between">
-                        <challenge.icon className={`h-8 w-8 mb-4 ${challenge.href ? 'text-primary' : 'text-muted-foreground'}`} />
-                        <Badge variant={challenge.href ? "default" : "secondary"}>
-                          {challenge.status}
-                        </Badge>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <challenge.icon className="w-6 h-6 text-orange-500" />
+                      </div>
+                      <CardTitle className="text-xl">{challenge.title}</CardTitle>
                     </div>
-                    <CardTitle className="text-xl">{challenge.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{challenge.description}</p>
+                  <CardContent className="flex-grow flex flex-col justify-between">
+                    <p className="text-muted-foreground mb-4">{challenge.description}</p>
+                    {challenge.href && (
+                      <div className="flex justify-end">
+                        <ArrowRight className="w-5 h-5 text-orange-500" />
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               );
@@ -168,16 +157,20 @@ const IamChallenges = () => {
                   }`}
                 >
                   <CardHeader>
-                    <div className="flex items-start justify-between">
-                        <challenge.icon className={`h-8 w-8 mb-4 ${challenge.href ? 'text-primary' : 'text-muted-foreground'}`} />
-                        <Badge variant={challenge.href ? "default" : "secondary"}>
-                          {challenge.status}
-                        </Badge>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <challenge.icon className="w-6 h-6 text-orange-500" />
+                      </div>
+                      <CardTitle className="text-xl">{challenge.title}</CardTitle>
                     </div>
-                    <CardTitle className="text-xl">{challenge.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{challenge.description}</p>
+                  <CardContent className="flex-grow flex flex-col justify-between">
+                    <p className="text-muted-foreground mb-4">{challenge.description}</p>
+                    {challenge.href && (
+                      <div className="flex justify-end">
+                        <ArrowRight className="w-5 h-5 text-orange-500" />
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               );
@@ -207,16 +200,20 @@ const IamChallenges = () => {
                   }`}
                 >
                   <CardHeader>
-                    <div className="flex items-start justify-between">
-                        <challenge.icon className={`h-8 w-8 mb-4 ${challenge.href ? 'text-primary' : 'text-muted-foreground'}`} />
-                        <Badge variant={challenge.href ? "default" : "secondary"}>
-                          {challenge.status}
-                        </Badge>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <challenge.icon className="w-6 h-6 text-orange-500" />
+                      </div>
+                      <CardTitle className="text-xl">{challenge.title}</CardTitle>
                     </div>
-                    <CardTitle className="text-xl">{challenge.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{challenge.description}</p>
+                  <CardContent className="flex-grow flex flex-col justify-between">
+                    <p className="text-muted-foreground mb-4">{challenge.description}</p>
+                    {challenge.href && (
+                      <div className="flex justify-end">
+                        <ArrowRight className="w-5 h-5 text-orange-500" />
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               );
@@ -246,16 +243,20 @@ const IamChallenges = () => {
                   }`}
                 >
                   <CardHeader>
-                    <div className="flex items-start justify-between">
-                        <challenge.icon className={`h-8 w-8 mb-4 ${challenge.href ? 'text-primary' : 'text-muted-foreground'}`} />
-                        <Badge variant={challenge.href ? "default" : "secondary"}>
-                          {challenge.status}
-                        </Badge>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <challenge.icon className="w-6 h-6 text-orange-500" />
+                      </div>
+                      <CardTitle className="text-xl">{challenge.title}</CardTitle>
                     </div>
-                    <CardTitle className="text-xl">{challenge.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-muted-foreground">{challenge.description}</p>
+                  <CardContent className="flex-grow flex flex-col justify-between">
+                    <p className="text-muted-foreground mb-4">{challenge.description}</p>
+                    {challenge.href && (
+                      <div className="flex justify-end">
+                        <ArrowRight className="w-5 h-5 text-orange-500" />
+                      </div>
+                    )}
                   </CardContent>
                 </Card>
               );

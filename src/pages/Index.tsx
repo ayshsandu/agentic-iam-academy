@@ -57,16 +57,14 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-emerald-50/30"></div>
+        <div className="absolute inset-0 hero-gradient"></div>
         
         <div className="container relative grid place-items-center gap-8 py-24 text-center md:py-32">
           <div className="animate-float">
-            <Bot className="h-16 w-16 text-primary mb-6" />
+            <Bot className="h-16 w-16 text-orange-500 mb-6" />
           </div>
-          
-          <h1 className="text-4xl font-bold tracking-tight lg:text-6xl xl:text-7xl max-w-4xl">
-            Mastering <span className="gradient-text">IAM</span> for{" "}
-            <span className="gradient-text">Agentic AI</span>
+          <h1 className="text-4xl font-bold tracking-tight lg:text-6xl xl:text-7xl max-w-4xl whitespace-nowrap">
+            Mastering <span className="text-orange-600">IAM</span> for <span className="text-orange-600">Agentic AI</span>
           </h1>
           
           <p className="max-w-3xl text-lg text-muted-foreground md:text-xl leading-relaxed">
@@ -96,7 +94,7 @@ const Index = () => {
                 className="modern-card p-8 text-center group hover:glow-effect"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <feature.icon className="h-12 w-12 text-primary mx-auto mb-6 group-hover:scale-110 transition-transform" />
+                <feature.icon className="h-12 w-12 text-orange-500 mx-auto mb-6 group-hover:scale-110 transition-transform" />
                 <h3 className="text-xl font-semibold mb-3 text-foreground">{feature.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
@@ -110,7 +108,7 @@ const Index = () => {
         <div className="container">
           <div className="mb-16 text-center">
             <h2 className="text-3xl font-bold mb-4 text-foreground">
-              Explore the <span className="gradient-text">Academy</span>
+              Explore the <span className="text-orange-600">Academy</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Dive into the key areas of IAM for Agentic AI and master the security patterns 
@@ -126,8 +124,8 @@ const Index = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="text-center pb-4">
-                  <section.icon className="h-12 w-12 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                  <CardTitle className="group-hover:text-primary transition-colors text-lg">
+                  <section.icon className="h-12 w-12 text-orange-500 mx-auto mb-4 group-hover:scale-110 transition-transform" />
+                  <CardTitle className="group-hover:text-orange-600 transition-colors text-lg">
                     {section.title}
                   </CardTitle>
                   <CardDescription className="text-base leading-relaxed">
@@ -135,7 +133,7 @@ const Index = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardFooter className="mt-auto pt-4">
-                  <Button variant="outline" asChild className="w-full group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all">
+                  <Button variant="outline" asChild className="w-full group-hover:bg-orange-600 group-hover:text-white group-hover:border-transparent transition-all">
                     <Link to={section.link}>
                       Learn More 
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -149,10 +147,11 @@ const Index = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-gray-50/30">
-        <div className="container text-center">
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 hero-gradient opacity-50"></div>
+        <div className="container text-center relative">
           <h2 className="text-3xl font-bold mb-4 text-foreground">
-            Ready to Secure the <span className="gradient-text">Agentic Future</span>?
+            Ready to Secure the <span className="text-orange-600">Agentic Future</span>?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
             Join the community of developers building the secure foundation for autonomous AI systems.
