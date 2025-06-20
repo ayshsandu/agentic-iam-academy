@@ -1,42 +1,32 @@
-# Welcome to your Lovable project
+# Agentic IAM Academy
 
-## Project info
+Educational resources for Identity and Access Management in autonomous AI systems.
 
-**URL**: https://lovable.dev/projects/749ef4ae-2f6a-4f8b-957c-5803c3e52dee
+## Project Description
 
-## How can I edit this code?
+This project provides comprehensive learning materials for understanding and implementing Identity and Access Management (IAM) for Agentic AI systems. It covers fundamental concepts, real-world challenges, and best practices for securing autonomous AI agents.
 
-There are several ways of editing your application.
+## How to run this project locally
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/749ef4ae-2f6a-4f8b-957c-5803c3e52dee) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Follow these steps to set up the project on your local machine:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
+# Step 1: Clone the repository
 git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate to the project directory
+cd agentic-iam-academy
 
-# Step 3: Install the necessary dependencies.
+# Step 3: Install the necessary dependencies
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server with auto-reloading and an instant preview
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+## Development Options
+
+**Edit files directly in GitHub**
 
 - Navigate to the desired file(s).
 - Click the "Edit" button (pencil icon) at the top right of the file view.
@@ -50,7 +40,7 @@ npm run dev
 - Click on "New codespace" to launch a new Codespace environment.
 - Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
+## Technologies Used
 
 This project is built with:
 
@@ -60,14 +50,11 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
-## How can I deploy this project?
+## Deployment
 
-Simply open [Lovable](https://lovable.dev/projects/749ef4ae-2f6a-4f8b-957c-5803c3e52dee) and click on Share -> Publish.
+This project can be deployed to any static hosting service like Netlify, Vercel, or GitHub Pages.
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+To build for production:
+```sh
+npm run build
+```
