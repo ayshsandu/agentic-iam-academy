@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="border-t bg-background">
       <div className="container py-6 text-center text-sm text-muted-foreground">
-        <p>&copy; {currentYear} Agentic IAM Academy. All Rights Reserved.</p>
+        <p>&copy; {currentYear} Agentic IAM Knowledge Hub. All Rights Reserved.</p>
         <p className="mt-2">
           Powered by{" "}
           <a 

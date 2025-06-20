@@ -3,10 +3,10 @@ const About = () => {
   return (
     <div className="container max-w-4xl py-8 md:py-12">
       <h1 className="text-4xl font-bold tracking-tight">
-        About IAM for Agentic AI Academy
+        About IAM for Agentic AI Knowledge Hub
       </h1>
       <p className="mt-4 text-lg text-muted-foreground">
-        Empowering developers to build secure and intelligent AI systems.
+        Empowering developers with knowledge to build secure and intelligent AI systems.
       </p>
 
       <div className="mt-8 space-y-6 text-base md:text-lg">
@@ -14,7 +14,7 @@ const About = () => {
           The rise of agentic AI systems introduces new and complex challenges for
           Identity and Access Management (IAM). Traditional IAM models were not
           designed for autonomous, non-human entities that act on behalf of
-          users or organizations. IAM for Agentic AI Academy was created to bridge this
+          users or organizations. IAM for Agentic AI Knowledge Hub was created to bridge this
           gap.
         </p>
         <p>
@@ -25,7 +25,7 @@ const About = () => {
         </p>
         <h2 className="text-2xl font-semibold pt-4">Our Focus</h2>
         <p>
-          This academy focuses on practical, developer-centric guidance. We
+          This knowledge hub focuses on practical, developer-centric guidance. We
           delve into:
         </p>
         <ul className="list-disc space-y-2 pl-6">
@@ -63,7 +63,7 @@ const About = () => {
           >
             GitHub repository
           </a>{" "}
-          to get started.
+          to learn more about how you can contribute to this important work.
         </p>
       </div>
     </div>
