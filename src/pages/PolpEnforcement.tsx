@@ -20,7 +20,9 @@ const PolpEnforcement = () => {
         <section>
           <h2 className="text-3xl font-semibold tracking-tight">What is PoLP?</h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            The Principle of Least Privilege (PoLP) is a foundational concept in information security. It dictates that any user, program, or process—including an AI agent—should have only the bare minimum privileges necessary to perform its function. The goal is to limit the potential damage that can be caused by accident, error, or a security breach.
+            The Principle of Least Privilege (PoLP) is a foundational concept in information security. It dictates that any user, program, 
+            or process, including an AI agent should have only the bare minimum privileges necessary to perform its function. 
+            The goal is to limit the potential damage that can be caused by accident, error, or a security breach.
           </p>
         </section>
 

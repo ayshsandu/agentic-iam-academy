@@ -20,14 +20,18 @@ const JitAccess = () => {
         <section>
           <h2 className="text-3xl font-semibold tracking-tight">The Problem: Standing Privileges</h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Just-in-Time (JIT) access is a security model that dramatically reduces the standing permissions available to any user or system, including AI agents. Instead of granting long-lived, persistent access, JIT grants temporary, elevated permissions on-demand to perform a specific task. Once the task is complete, the access is automatically revoked.
+            Just-in-Time (JIT) access is a security model that dramatically reduces the standing permissions available to any user or system, 
+            including AI agents. Instead of granting long-lived, persistent access, JIT grants temporary, elevated permissions on-demand to perform a specific task.
+            Once the task is complete, the access is automatically revoked.
           </p>
         </section>
 
         <section>
           <h2 className="text-3xl font-semibold tracking-tight">Why JIT is Crucial for Agentic AI</h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            For autonomous agents that may operate with little direct supervision, JIT access is a critical safeguard. It minimizes the attack surface by ensuring that an agent—or an attacker who compromises it—only has elevated privileges for the briefest possible moment. This contains the potential damage from a compromised agent.
+            For autonomous agents that may operate with little direct supervision, JIT access is a critical safeguard. 
+            It minimizes the attack surface by ensuring that an agent or an attacker who compromises it, only has elevated privileges for the briefest possible moment. 
+            This contains the potential damage from a compromised agent.
           </p>
         </section>
 

@@ -14,6 +14,8 @@ import About from "./pages/About";
 import Scenarios from "./pages/Scenarios";
 import WhatIsAgenticAI from "./pages/WhatIsAgenticAI";
 import WhyIAMMatters from "./pages/WhyIAMMatters";
+import AgenticIAMvsIAMForAgenticAI from "./pages/AgenticIAMvsIAMForAgenticAI";
+import WhyIAMIsCriticalForAgenticAI from "./pages/WhyIAMIsCriticalForAgenticAI";
 import AgentIdentityProblem from "./pages/AgentIdentityProblem";
 import IamChallenges from "./pages/IamChallenges";
 import DynamicAuthorization from "./pages/DynamicAuthorization";
@@ -44,6 +46,8 @@ const App = () => (
           <Route element={<Layout />}>
             <Route index element={<Index />} />
             <Route path="/what-is-agentic-ai" element={<WhatIsAgenticAI />} />
+            <Route path="/agentic-iam-vs-iam-for-agentic-ai" element={<AgenticIAMvsIAMForAgenticAI />} />
+            <Route path="/why-iam-is-critical-for-agentic-ai" element={<WhyIAMIsCriticalForAgenticAI />} />
             <Route path="/why-iam-matters" element={<WhyIAMMatters />} />
             <Route path="/agent-identity-problem" element={<AgentIdentityProblem />} />
             <Route path="/iam-challenges" element={<IamChallenges />} />

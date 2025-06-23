@@ -30,8 +30,8 @@ const SecuringSecretsAndTokens = () => {
             The Problem: Digital Keys Under the Doormat
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            AI agents, like any application, need credentials—secrets, tokens,
-            API keys—to access resources and services. The challenge is that these
+            AI agents, like any application, need credentials, secrets, tokens,
+            API keys, to access resources and services. The challenge is that these
             agents are often autonomous and distributed, making traditional
             secret management methods insufficient. Hardcoding secrets in code is a
             major security risk. Storing them in configuration files or

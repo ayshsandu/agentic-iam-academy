@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import {
   Accordion,
@@ -15,9 +14,19 @@ const conceptsAndTerms = [
     content: "An access control model where authorization decisions are based on attributes associated with the subject, object, resource, and environment, evaluated against policies. It allows for highly granular and context-aware permissions.",
   },
   {
+    value: "agentic-iam",
+    title: "Agentic IAM",
+    content: "Identity and Access Management systems that themselves use AI agents to enhance and automate IAM processes. This includes AI-powered user provisioning, automated access reviews, intelligent threat detection in access patterns, self-healing permission systems, and AI-assisted developer and user experience enhancements.",
+  },
+  {
     value: "agent-to-agent",
     title: "Agent-to-Agent Communication",
     content: "When agents need to collaborate, they must be able to securely communicate with each other. This requires a mechanism for agents to discover, authenticate, and authorize communication with other agents. Mutual TLS (mTLS) with short-lived certificates, based on verifiable agent identities, is a common pattern to establish secure and trusted channels.",
+  },
+  {
+    value: "iam-for-agentic-ai",
+    title: "IAM for Agentic AI",
+    content: "The practice of managing the identity and access rights of AI agents themselves, treating them as digital identities that need proper authentication, authorization, and governance. This involves securely identifying AI agents, defining their resource access permissions, implementing just-in-time access for agent operations, enabling explicit user consent and human-in-the-loop verification, and auditing agent activities across systems.",
   },
   {
     value: "api-key",

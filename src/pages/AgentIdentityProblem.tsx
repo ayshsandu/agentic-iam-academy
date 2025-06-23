@@ -1,11 +1,10 @@
-
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Fingerprint, HelpCircle, Contact, ClipboardList, ArrowRight } from "lucide-react";
+import { Fingerprint, HelpCircle, Contact, ClipboardList, ArrowRight, Shield, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 

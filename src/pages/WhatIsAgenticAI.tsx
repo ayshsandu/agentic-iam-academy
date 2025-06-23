@@ -1,4 +1,3 @@
-
 import {
   Card,
   CardContent,
@@ -56,6 +55,8 @@ const WhatIsAgenticAI = () => {
         </div>
       </div>
 
+
+
       <div className="mt-12 space-y-6">
         <Card>
           <CardHeader>
@@ -67,20 +68,19 @@ const WhatIsAgenticAI = () => {
             </p>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader>
-            <CardTitle>The IAM Challenge</CardTitle>
+            <CardTitle>Understanding IAM and Agentic AI</CardTitle>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground">
-              This is where Identity and Access Management becomes critical. How do we grant these autonomous agents the permissions they need to do their jobs without giving them the keys to the entire kingdom? An agent that can book travel needs access to a payment API, but it certainly shouldn't have access to HR systems. Defining, managing, and securing the identity and permissions of these non-human workers is the core challenge this guide will help you solve.
+              There's an important distinction between using AI to improve IAM systems versus managing AI agents as digital identities. This guide focuses on the latter - treating AI agents as entities that need proper identity, authentication, and access controls.
             </p>
           </CardContent>
           <CardFooter>
             <Button asChild variant="outline">
-              <Link to="/why-iam-matters">
-                Learn Why IAM Matters <ArrowRight className="ml-2 h-4 w-4" />
+              <Link to="/agentic-iam-vs-iam-for-agentic-ai">
+                Learn the Key Distinction <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </CardFooter>

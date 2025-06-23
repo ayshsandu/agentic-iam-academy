@@ -1,6 +1,6 @@
 
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Fingerprint, LockKeyhole, Hourglass, Handshake, KeyRound, ListChecks, ShieldAlert, EyeOff, ShieldOff, Clock, ShieldCheck, Share2, PackageCheck, Recycle, ArrowRight } from "lucide-react";
+import { Fingerprint, LockKeyhole, Hourglass, Handshake, KeyRound, ListChecks, ShieldAlert, EyeOff, ShieldOff, Clock, ShieldCheck, Share2, PackageCheck, Recycle, ArrowRight, CheckCircle , Shield} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const challenges = [
@@ -96,10 +96,9 @@ const IamChallenges = () => {
       <div className="mb-12">
         <h1 className="text-4xl font-bold tracking-tight mb-4">The Core Challenges of Agentic IAM</h1>
         <p className="text-lg text-muted-foreground">
-          Securing an autonomous workforce requires solving a set of interconnected challenges. This is our guide to understanding them.
+          Securing an autonomous workforce requires solving a set of interconnected challenges. This is our guide to understand them and find possible solutions.
         </p>
       </div>
-
       <div className="space-y-12">
         <section>
           <h2 className="text-2xl font-semibold tracking-tight mb-6">Identity & Authentication Challenges</h2>
